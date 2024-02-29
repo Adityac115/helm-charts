@@ -1,0 +1,8 @@
+appName: python-app
+
+namespace: default
+
+image:
+  name: aditya115/python-app
+  tag: latest
+
