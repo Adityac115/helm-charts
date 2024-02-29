@@ -4,5 +4,5 @@ namespace: default
 
 image:
   name: aditya115/python-app
-  tag: latest
+  tag: 36f3af7c80d31f2c6f5c3141f3f596674ab060b8
 
