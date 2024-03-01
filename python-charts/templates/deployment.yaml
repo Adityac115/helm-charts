@@ -13,11 +13,14 @@ spec:
     metadata:
       labels:
         app: {{ .Values.appName }}
-    nodeSelector:
-          type: python
     spec:
       containers:
       - name: "python-hello"
         image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: 5000
+      tolerations:
+      - key: app
+        operator: Equal
+        value: python
+        effect: NoSchedule
