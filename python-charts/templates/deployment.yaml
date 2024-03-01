@@ -19,3 +19,5 @@ spec:
         image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: 5000
+       nodeSelector:
+	  type: python
