@@ -1,0 +1,21 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ .Values.appName  }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.appName  }}
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: {{ .Values.appName  }}
+    apiVersion: apps/v1
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 60
