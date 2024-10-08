@@ -4,5 +4,5 @@ namespace: default
 
 image:
   name: aditya115/node-app
-  tag: 5fa6db15a7ed4b2d672345e598f347c0602a8974
+  tag: 4f75eefecd5a299508178bfe8bb768d10ada5299
 
